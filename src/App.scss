@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #0E0E38;
+}
+
+body {
+  height: 100vh;
+  background: #EFF0F1;
+}
+
+
+.stickyBar {
+  background-color: gray;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.header {
+  box-shadow: -1px 4px 11px -6px rgb(0 0 0 / 68%);
+  -webkit-box-shadow: -1px 4px 11px -6px rgb(0 0 0 / 68%);
+  -moz-box-shadow: -1px 4px 11px -6px rgb(0 0 0 / 68%);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

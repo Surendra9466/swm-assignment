@@ -1,4 +1,4 @@
-import Reat, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom"
 import QuotesData from './QuotesData';
 import Spinner from './Spinner';
@@ -15,15 +15,15 @@ function Quotes() {
                 setLoader(false);
             })
     }, [])
-    console.log(quotesData)
     if (loader) {
-        return <Spinner />
+        return <div className='loader'><Spinner /></div>
     }
     return (
-        <section>
+        <div className='quotes-wrapper'>
             {quotesData ? <QuotesData quotesData={quotesData} />
-                : null}
-        </section>
+                : null
+            }
+        </div>
     )
 }
 
