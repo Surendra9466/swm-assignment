@@ -1,15 +1,15 @@
 import './App.scss';
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes, Link } from "react-router-dom"
 import './styles/categories.scss';
 import Categories from './components/Categories';
 import Quotes from './components/Quotes';
-import HeaderFooter from './components/HeaderFooter';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
       <header className='header'>
-        <HeaderFooter text="Made with &hearts;"/>
+      <Link to="/"><Header text="Made with &hearts;"/></Link>
       </header>
       <Routes>
         <Route path="/" element={<Categories />} />
