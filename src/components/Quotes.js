@@ -14,7 +14,7 @@ function Quotes() {
 
     return (
         <div className='quotes-wrapper'>
-            {apiData ? <QuotesData apiData={apiData} />
+            {apiData ? <QuotesData apiData={apiData} title={id}/>
                 : null
             }
         </div>
