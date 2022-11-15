@@ -23,6 +23,7 @@ function QuotesData({ apiData, title}) {
                 })}
                 </div>
             </div>
+            <p className='msg'>Click on tags to see some magic</p>
         </section>
     )
 }
