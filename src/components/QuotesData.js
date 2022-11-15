@@ -3,7 +3,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function QuotesData({ quotesData }) {
     const notify = (e) => {
-        return toast(`You just clicked ${e.target.innerText}`);
+        if(e.target.closest('.tag')) {
+            return toast(`You just clicked ${e.target.innerText}`);
+        }
     };
 
     return (
