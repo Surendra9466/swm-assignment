@@ -1,7 +1,7 @@
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-function QuotesData({ quotesData }) {
+function QuotesData({ apiData }) {
     const notify = (e) => {
         if(e.target.closest('.tag')) {
             return toast(`You just clicked ${e.target.innerText}`);
@@ -10,12 +10,12 @@ function QuotesData({ quotesData }) {
 
     return (
         <section className='quotes-data'>
-            <div className="hero-img"><img src={quotesData.background} alt="Quotes background" /></div>
-            <div className="quote"><span >Quote : </span> {quotesData.quoteString}</div>
-            <div className="author"><span >Author : </span> {quotesData.author}</div>
+            <div className="hero-img"><img src={apiData.background} alt="Quotes background" /></div>
+            <div className="quote"><span >Quote: </span> {apiData.quoteString}</div>
+            <div className="author"><span >Author: </span> {apiData.author}</div>
             <div onClick={notify}>
                 <ToastContainer autoClose={3000}/>
-                <div className="tags-wrapper" >{quotesData.tags?.map((item, index) => {
+                <div className="tags-wrapper" >{apiData.tags?.map((item, index) => {
                     return (
                         <div className="tag" key={index}>{item.name}</div>
                     )

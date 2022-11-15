@@ -1,22 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom"
 import Spinner from './Spinner';
+import useFetch from "../customHooks/useFetch";
 
+const url = 'https://qodapi.azurewebsites.net/api/Categories';
 
 function Categories() {
-    const [apiData, setApiData] = useState([]);
-    const [loader, setLoader] = useState(true);
+    const { isLoading, apiData } = useFetch(url);
 
-    useEffect(() => {
-        fetch('https://qodapi.azurewebsites.net/api/Categories')
-            .then((res) => res.json())
-            .then((data) => {
-                setApiData(data)
-                setLoader(false);
-            })
-    }, []);
-
-    if (loader) {
+    if (isLoading) {
         return <div className='loader'><Spinner /></div>
     }
 
