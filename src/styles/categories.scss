@@ -18,7 +18,7 @@
 }
 
 .quotes-data {
-    max-width: 800px;
+    max-width: 500px;
     margin: 30px auto;
     padding: 20px 40px;
     background-color: #fff;
@@ -38,13 +38,6 @@
         height: 250px;
         cursor: pointer;
 
-        @media (min-width: 500px) {
-            height: 400px;
-        }
-
-        @media (min-width: 1024px) {
-            height: 500px;
-        }
 
         img {
             width: 100%;
